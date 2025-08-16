@@ -1,10 +1,10 @@
 # Video Generator for Scientific Benchmarks
 
-This repository provides tools to generate synthetic videos on Python for benchmarking video processing algorithms.
-- IPI Generator: Creates videos of moving circles with fringe patterns, simulating typical images produced by Interferometric Particle Imaging (IPI) methods.
+This repository provides tools to generate synthetic videos on Python for benchmarking video processing algorithms, from an easy to operate graphical interface.
+- IPI Generator: Creates videos of moving circles with fringe patterns, simulating typical images produced by Interferometric Particle Imaging (IPI/ILIDS) methods.
 - Bubble Generator: Simulates bubbles rising in columns, mimicking typical images produced by bubble imaging with back lighting.
 
-Both tools output videos and associated data files for analysis. Example images of what these methods can produce are stored in the `ExamplesExperiments` folder.
+Both tools output videos to be processed by your detection algorithm to test it, and associated data files for analysis and comparison of real data versus data measured by your detection algorithm. Example images of what these experimentals methods can produce are stored in the `ExamplesExperiments` folder.
 
 ---
 ## Features
@@ -46,7 +46,7 @@ python bubble_generator.py \
   --video_path ./bubble_simulation.mp4 \
   --csv_path ./bubble_data.csv
 
-For all available options, run:
+For all available options, click on the question mark in the GUI, or run:
 python IPI_generator.py --help
 python bubble_generator.py --help
 
