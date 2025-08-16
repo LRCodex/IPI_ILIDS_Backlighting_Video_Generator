@@ -4,7 +4,7 @@ This repository provides tools to generate synthetic videos for benchmarking vid
 - IPI Generator: Creates videos of moving circles with fringe patterns, simulating typical images produced by Interferometric Particle Imaging (IPI) methods.
 - Bubble Generator: Simulates bubbles rising in columns, mimicking typical images produced by bubble imaging with back lighting.
 
-Both tools output videos and associated data files for analysis. Example images of what these methods can produce are stored in the `ExampleExperiment` folder.
+Both tools output videos and associated data files for analysis. Example images of what these methods can produce are stored in the `ExamplesExperiments` folder.
 
 ---
 ## Features
