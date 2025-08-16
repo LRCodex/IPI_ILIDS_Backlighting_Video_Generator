@@ -1,0 +1,94 @@
+=== VIDEO GENERATOR USER MANUAL ===
+
+This application generates two types of scientific videos for benchmarking:
+1. Disks with fringes (for Interferometric Particle Imaging/IPI)
+2. Bubbles rising in columns
+
+---
+
+=== IPI GENERATOR ===
+Purpose:
+Generates videos of moving circles with fringe patterns and optional blobs (circles without fringes) for testing tracking algorithms.
+
+Output Files:
+- Video: AVI file of moving circles/blobs.
+- circles_properties_synth_[random].txt: Fringe count per frame.
+- circles_properties_synth_noduplicate_[random].txt: Unique list of all fringes in the video.
+
+Parameters:
+- Circle Parameters:
+  * Minimum/Maximum Radius (rmin/rmax): Size range of circles (default: 30-80).
+  * Horizontal/Vertical Velocity (vitx/vity): Movement speed (default: 20/10).
+- Video Parameters:
+  * FPS: Frames per second (default: 30).
+  * Duration: Video length in seconds (default: 4).
+  * Number of Circles/Blobs: Number of circles and blobs to generate (default: 20/5).
+- Background Options:
+  * Use Background Image: Toggle for custom background (default: False).
+  * Background Image Path: Path to background image (default: B:\Documents\Circle_Maker\CleanBuild\AVG_bg.tif).
+- Post-Processing:
+  * Apply Blur: Adds Gaussian blur (default: True).
+  * Blur Radius: Strength of blur (default: 5).
+  * Apply Rotation: Rotates frames 90° clockwise (default: True).
+- Paths:
+  * Save Path: Directory for temporary PNG frames (default: B:\Documents\Circle_Maker\CleanBuild\Images).
+  * Output Video Path: Directory for final video and data files (default: B:\Documents\Circle_Maker\CleanBuild).
+
+Usage Tips:
+- Create an "Images" folder for temporary frames.
+- Set "Number of Blobs" to 0 for circles only.
+- Background image resolution: 2048x1024.
+- Fringe count is randomly generated using a log-normal distribution.
+
+---
+
+=== BUBBLE GENERATOR ===
+Purpose:
+Generates videos of bubbles rising in three columns, simulating real bubble behavior.
+
+Output Files:
+- Video: MP4 file of bubbles.
+- bubble_data.csv: Frame-by-frame data (frame, bubble_id, x, y, radius, velocity).
+
+Parameters:
+- Video Parameters:
+  * Width/Height: Video resolution (default: 1000x1000).
+  * FPS: Frames per second (default: 20).
+  * Duration: Video length in seconds (default: 10).
+- Bubble Parameters:
+  * Spawn Interval: Frequency of new bubbles (default: 0.25 seconds).
+  * Large Radius Probability: Chance for large bubbles (default: 0.2).
+  * Radius Decrease Factor: How much bubbles shrink as they rise (default: 0.25).
+- Output Paths:
+  * Video Path: Directory for MP4 video (default: B:\Documents\Circle_Maker\CleanBuild\bubble_simulation.mp4).
+  * CSV Path: Directory for bubble data (default: B:\Documents\Circle_Maker\CleanBuild\bubble_data.csv).
+
+Usage Tips:
+- Bubbles spawn in 3 vertical columns.
+- Bubbles follow sinusoidal paths.
+- Lower decrease factor = bubbles maintain size longer.
+
+---
+
+=== GENERAL TIPS ===
+- Ensure output folders exist before generating.
+- Progress is shown in the console.
+- Errors will be printed if something goes wrong.
+- Required dependencies: OpenCV (cv2), NumPy, tqdm, FFmpeg.
+
+---
+
+=== TROUBLESHOOTING ===
+Problem: Video doesn't generate
+- Check paths and write permissions.
+- Ensure FFmpeg is installed.
+
+Problem: Slow performance
+- Reduce resolution or object count.
+- Close other applications.
+
+Problem: Missing dependencies
+Run:
+pip install opencv-python numpy tqdm
+
+---
