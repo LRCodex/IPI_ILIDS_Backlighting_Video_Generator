@@ -1,7 +1,7 @@
 === VIDEO GENERATOR USER MANUAL ===
 
 This application generates two types of scientific videos for benchmarking:
-1. Disks with fringes (for Interferometric Particle Imaging/IPI)
+1. Disks with fringes (for Interferometric Particle Imaging IPI or ILIDS)
 2. Bubbles rising in columns
 
 ---
@@ -88,7 +88,7 @@ Problem: Slow performance
 - Close other applications.
 
 Problem: Missing dependencies
-Run:
-pip install opencv-python numpy tqdm
+Install dependencies listed in the readme note.
 
 ---
+
