@@ -19,10 +19,17 @@ Both tools output videos to be processed by your detection algorithm to test it,
    git clone https://github.com/yourusername/video-generator.git
    cd video-generator
 
-2. Install dependencies:
-   pip install opencv-python numpy tqdm scipy names dearpygui argparse
+2. Required Packages
+This project relies on the following Python packages:
+- **OpenCV (`opencv-python`)**: For video and image processing.
+- **NumPy**: For numerical operations and array handling.
+- **Tqdm**: For progress bars during video generation.
+- **SciPy**: For statistical functions (e.g., log-normal distribution for fringe generation).
+- **Names**: For generating random names for output files.
+- **Dear PyGui**: For the graphical user interface (GUI).
+- **Argparse**: For parsing command-line arguments.
 
-3. Ensure FFmpeg is installed for video encoding. You can download it from https://ffmpeg.org/.
+Additionally, **FFmpeg** is required for video encoding. You can install it from [FFmpeg's official website](https://ffmpeg.org/).
 
 ---
 ## Usage
